@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap');
+@import './hamburger-menu.css';
+
+body {
+  font-family: 'Nunito', sans-serif;
+}
+
+*::selection {
+  color: white;
+  background-color: #bf00ff;
+}
+
+img, nav, header, footer {
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+.page-header {
+  background: rgb(0,157,255);
+  background: linear-gradient(128deg, #009dff 0%, #bf00ff 30%, #ff0000 100%);
+  position: relative;
+  height: 80vh;
+}
+
+.page-header .container {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#mainNav {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  transition:all 0.3s ease;
+}
+
+.bg-black {
+  background-color: black;
+}
+
+.nav-height {
+  padding-top: 5px!important;
+  padding-bottom: 5px!important;
+}
+
+.wave {
+  position: absolute;
+  bottom: 0;
+  z-index: 3;
+}
+
+section {
+  padding: 150px 0;
+}
+
+header {
+  position: relative;
+  background-color: black;
+  height: 75vh;
+  min-height: 25rem;
+  width: 100%;
+  overflow: hidden;
+}
+
+header video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: 0;
+  -ms-transform: translateX(-50%) translateY(-50%);
+  -moz-transform: translateX(-50%) translateY(-50%);
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+}
+
+header .container {
+  position: relative;
+  z-index: 2;
+}
+
+header .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: black;   
+  background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAG0lEQVQYV2NkYGD4z8DAwMgABXAGNgGwSgwVAFbmAgXQdISfAAAAAElFTkSuQmCC') repeat;
+  opacity: 0.3;
+  z-index: 1;
+}
+
+@media (pointer: coarse) and (hover: none) {
+  header {
+    background: url('https://source.unsplash.com/XT5OInaElMw/1600x900') black no-repeat center center scroll;
+  }
+  header video {
+    display: none;
+  }
+}
